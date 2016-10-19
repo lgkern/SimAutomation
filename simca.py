@@ -53,9 +53,9 @@ def main():
         for fight in options.fights.split(","):
             if isinstance(options.bosses,str):
                 for bossCount in options.bosses.split(","):
-                    sim(profile, fight_reader(fight), options.iterations, 1 if options.scaleFactors else 0, options.time, options.variance, bossCount, options.cores, options.outputFile+fight+bossCount, options.logFile)
+                    sim(profile, fight_reader(fight), options.iterations, 1 if options.scaleFactors else 0, options.time, options.variance, bossCount, options.cores, options.outputFile+profile+fight+bossCount, options.logFile)
             else:
-                sim(profile, fight_reader(fight), options.iterations, 1 if options.scaleFactors else 0, options.time, options.variance, options.bosses, options.cores, options.outputFile+fight, options.logFile)
+                sim(profile, fight_reader(fight), options.iterations, 1 if options.scaleFactors else 0, options.time, options.variance, options.bosses, options.cores, options.outputFile+profile+fight, options.logFile)
 
 if __name__ == "__main__":
     main()
