@@ -4,7 +4,7 @@ from subprocess import call
 
 def sim(profile, fight, iterations=10000, scaleFactors=0, time=300, variance=0.1, bossCount=1, cores=4, outputFile=None, logFile=None):
     print("simming!")
-    call("simc.exe iterations={0} calculate_scale_factors={1} max_time={2} vary_combat_length={3} fight_style={4} desired_targets={5} threads={6} html={7}.html {8}".format(iterations, scaleFactors, time, variance, fight, bossCount, cores, outputFile, profile, logFile))
+    call("simc.exe iterations={0} calculate_scale_factors={1} max_time={2} vary_combat_length={3} fight_style={4} desired_targets={5} threads={6} html={7}.html {8}".format(iterations, scaleFactors, time, variance, fight, bossCount, cores, outputFile, profile))
     
 def fight_reader(fight):
     fight = fight.lower()
