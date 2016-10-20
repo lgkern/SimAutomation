@@ -49,7 +49,9 @@ def main():
                       help="log file name (base log file name for multiple simulations)", default=None)   
     (options, args) = parser.parse_args()
 
-    for time in options.time.split(","):
+    times = str(options.time) if not isinstance(options.time,str) else options.time
+    
+    for time in times.split(","):
         for profile in options.profilename.split(","):
             for fight in options.fights.split(","):
                 if isinstance(options.bosses,str):
