@@ -34,10 +34,10 @@ def main():
     parser.add_option("-s", "--scale-factors", action="store_true", dest="scaleFactors",
                       help="calculate scale factors for each simulation ran", default=False)
     parser.add_option("-t", "--time", dest="time",
-                      help="maximum simulation length", default=300)         
+                      help="maximum simulation length (supports comma-separated lists)", default=300)         
     parser.add_option("-v", "--variance", dest="variance",
                       help="simulation length variance", default=0.1)    
-    parser.add_option("-f", "--fights", dest="fights",
+    parser.add_option("-f", "--fights", dest="fights", default="pw"
                       help="fight styles to be simulated (supports comma-separated lists)") 
     parser.add_option("-b", "--bosses", dest="bosses",
                       help="amount of bosses in each simulation (supports comma-separated lists)", default=1)  
@@ -49,13 +49,14 @@ def main():
                       help="log file name (base log file name for multiple simulations)", default=None)   
     (options, args) = parser.parse_args()
 
-    for profile in options.profilename.split(","):
-        for fight in options.fights.split(","):
-            if isinstance(options.bosses,str):
-                for bossCount in options.bosses.split(","):
-                    sim(profile, fight_reader(fight), options.iterations, 1 if options.scaleFactors else 0, options.time, options.variance, bossCount, options.cores, options.outputFile+profile+fight+bossCount, options.logFile)
-            else:
-                sim(profile, fight_reader(fight), options.iterations, 1 if options.scaleFactors else 0, options.time, options.variance, options.bosses, options.cores, options.outputFile+profile+fight, options.logFile)
+    for time in options.time.split(","):
+        for profile in options.profilename.split(","):
+            for fight in options.fights.split(","):
+                if isinstance(options.bosses,str):
+                    for bossCount in options.bosses.split(","):
+                        sim(profile, fight_reader(fight), options.iterations, 1 if options.scaleFactors else 0, time, options.variance, bossCount, options.cores, options.outputFile+profile+fight+bossCount, options.logFile)
+                else:
+                    sim(profile, fight_reader(fight), options.iterations, 1 if options.scaleFactors else 0, time, options.variance, options.bosses, options.cores, options.outputFile+profile+fight, options.logFile)
 
 if __name__ == "__main__":
     main()
