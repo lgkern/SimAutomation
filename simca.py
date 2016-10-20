@@ -37,7 +37,7 @@ def main():
                       help="maximum simulation length (supports comma-separated lists)", default=300)         
     parser.add_option("-v", "--variance", dest="variance",
                       help="simulation length variance", default=0.1)    
-    parser.add_option("-f", "--fights", dest="fights", default="pw"
+    parser.add_option("-f", "--fights", dest="fights", default="pw",
                       help="fight styles to be simulated (supports comma-separated lists)") 
     parser.add_option("-b", "--bosses", dest="bosses",
                       help="amount of bosses in each simulation (supports comma-separated lists)", default=1)  
