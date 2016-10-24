@@ -27,26 +27,21 @@ def fight_reader(fight):
 def main():
     usage = "usage: %prog [options] arg"
     parser = OptionParser(usage)
-    parser.add_option("-p", "--profile", dest="profilename",
-                      help="sim profile file to be read (supports comma-separated lists)")
-    parser.add_option("-i", "--iterations", dest="iterations",
-                      help="amount of iterations to be run by each profile", default=10000)
-    parser.add_option("-s", "--scale-factors", action="store_true", dest="scaleFactors",
-                      help="calculate scale factors for each simulation ran", default=False)
-    parser.add_option("-t", "--time", dest="time",
-                      help="maximum simulation length", default=300)         
-    parser.add_option("-v", "--variance", dest="variance",
-                      help="simulation length variance", default=0.1)    
-    parser.add_option("-f", "--fights", dest="fights",
-                      help="fight styles to be simulated (supports comma-separated lists)") 
-    parser.add_option("-b", "--bosses", dest="bosses",
-                      help="amount of bosses in each simulation (supports comma-separated lists)", default=1)  
-    parser.add_option("-c", "--cores", dest="cores",
-                      help="amount of threads to be used by SimulationCraft",default=4)   
-    parser.add_option("-o", "--output", dest="outputFile",
-                      help="output file name (base output file name for multiple simulations)", default=None) 
-    parser.add_option("-l", "--log", dest="logFile",
-                      help="log file name (base log file name for multiple simulations)", default=None)   
+    parser.add_option("-p", "--profile", dest="profilename", help="sim profile file to be read (supports comma-separated lists)")
+    parser.add_option("-i", "--iterations", dest="iterations", help="amount of iterations to be run by each profile", default=10000)
+    parser.add_option("-s", "--scale-factors", action="store_true", dest="scaleFactors", help="calculate scale factors for each simulation ran", default=False)
+    parser.add_option("-t", "--time", dest="time", help="maximum simulation length", default=300)         
+    parser.add_option("-v", "--variance", dest="variance", help="simulation length variance, ranges from 0 to 1", default=0.1)    
+    parser.add_option("-f", "--fights", dest="fights", help="fight styles to be simulated (supports comma-separated lists)") 
+    parser.add_option("-b", "--bosses", dest="bosses", help="amount of bosses in each simulation (supports comma-separated lists)", default=1)  
+    parser.add_option("-c", "--cores", dest="cores", help="amount of threads to be used by SimulationCraft",default=4)   
+    parser.add_option("-o", "--output", dest="outputFile", help="output file name (base output file name for multiple simulations)", default=None) 
+    parser.add_option("-or", "--optimal-raid", action="store_true", dest="optimalRaid", help="toggles Optimal Raid setting", default=False) 
+    parser.add_option("-db", "--disable-bloodlust", action="store_true", dest="disableBloodlust", help="", default=False) 
+    parser.add_option("-l", "--log", dest="logFile", help="log file name (base log file name for multiple simulations)", default=None)   
+    parser.add_option("-ps", "--plot-stats", dest="plotStats", help="the DPS stats that should be plotted (supports comma-separated lists)", default=None)   
+    parser.add_option("-pp", "--plot-points", dest="plotPoints", help="the number of points to use to create the plot graph.", default=None)   
+    parser.add_option("-pt", "--plot-steps", dest="plotStep", help=" is the delta between two points of the plot graph.", default=None)   
     (options, args) = parser.parse_args()
 
     for profile in options.profilename.split(","):
