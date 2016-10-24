@@ -51,17 +51,21 @@ def main():
     parser.add_option("-b", "--bosses", dest="bosses", help="amount of bosses in each simulation (supports comma-separated lists)", default=1)  
     parser.add_option("-c", "--cores", dest="cores", help="amount of threads to be used by SimulationCraft",default=4)   
     parser.add_option("-o", "--output", dest="outputFile", help="output file name (base output file name for multiple simulations)", default=None) 
-    parser.add_option("-or", "--optimal-raid", action="store_true", dest="optimalRaid", help="toggles Optimal Raid setting", default=False) 
-    parser.add_option("-db", "--disable-bloodlust", action="store_true", dest="disableBloodlust", help="", default=False) 
+    parser.add_option("-r", "--optimal-raid", action="store_true", dest="optimalRaid", help="toggles Optimal Raid setting", default=False) 
+    parser.add_option("-d", "--disable-bloodlust", action="store_true", dest="disableBloodlust", help="", default=False) 
     parser.add_option("-l", "--log", dest="logFile", help="log file name (base log file name for multiple simulations)", default=None)   
-    parser.add_option("-ps", "--plot-stats", dest="plotStats", help="the DPS stats that should be plotted (supports comma-separated lists)", default=None)   
-    parser.add_option("-pp", "--plot-points", dest="plotPoints", help="the number of points to use to create the plot graph.", default=20)   
-    parser.add_option("-pt", "--plot-steps", dest="plotStep", help=" is the delta between two points of the plot graph.", default=160.0)   
+    parser.add_option("-y", "--plot-stats", dest="plotStats", help="the DPS stats that should be plotted (supports comma-separated lists)", default=None)   
+    parser.add_option("-z", "--plot-points", dest="plotPoints", help="the number of points to use to create the plot graph.", default=20)   
+    parser.add_option("-e", "--plot-steps", dest="plotStep", help=" is the delta between two points of the plot graph.", default=160.0)   
     parser.add_option("-x", "--xml", dest="xmlFile", help="the xml output file name (base xml output file name for multiple simulations)", default=None) 
     parser.add_option("-j", "--json", dest="jsonFile", help="the json output file name (base json output file name for multiple simulations)", default=None) 
 
     (options, args) = parser.parse_args()
 
+    if not options.profilename:
+        print('Invalid profile name, please provide a valid one')
+        return
+    
     times = str(options.time) if not isinstance(options.time,str) else options.time
     
     for time in times.split(","):
