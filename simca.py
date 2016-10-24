@@ -4,7 +4,7 @@ from subprocess import call
 
 def sim(profile, fight, iterations=10000, scaleFactors=0, time=300, variance=0.1, bossCount=1, cores=4, outputFile=None, logFile=None, optimalRaid=True, disableBloodlust=False, plotStats=None, plotPoints=20, plotStep=160.0, plotTargetError=0.1, xmlFile = None, jsonFile = None):
     print("simming!")
-    +profile+fight+bossCount+str(time)
+    
     arguments='iterations={0} calculate_scale_factors={1} max_time={2} vary_combat_length={3} fight_style={4} desired_targets={5} threads={6}'.format(iterations, scaleFactors, time, variance, fight, bossCount, cores)
     if disableBloodlust:
         arguments+=' override.bloodlust=0'
@@ -18,6 +18,7 @@ def sim(profile, fight, iterations=10000, scaleFactors=0, time=300, variance=0.1
         arguments+=' xml={0}.xml'.format(xmlFile+'.'+profile+'.'+fight+'.'+bossCount+'.'+time)
     if jsonFile:
         arguments+=' json={0}.json'.format(jsonFile+'.'+profile+'.'+fight+'.'+bossCount+'.'+time)
+    arguments+=' {0}'.format(profile)
     if logFile:
        arguments+=' > {0}.log'.format(logFile)
     
