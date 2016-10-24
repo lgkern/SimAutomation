@@ -1,12 +1,7 @@
-# Requires the package 'beautifulsoup4'
-#
-# Installed using 
-#      pip install beautifulsoup4
-# on the command line
-
 from optparse import OptionParser
 import os
 import json
+from os import path
 
 def parse(filename, isCsv, hideHeaders):
     separator = ',' if isCsv else '\t'
@@ -20,7 +15,10 @@ def parse(filename, isCsv, hideHeaders):
         sim = json.loads(s)
         for player in sim['sim']['players']:
             if 'Int' in player['scale_factors']:
-                ret+= player['name'] + separator
+                if(hideHeaders):
+                    ret+= path.splitext(filename)[0]+separator
+                else:
+                    ret+= player['name'] + separator
                 ret+= '{0:.{1}f}'.format(player['collected_data']['dmg']['mean'],2) + separator
                 ret+= '{0:.{1}f}'.format(player['collected_data']['dps']['mean'],2) + separator
                 weights = player['scale_factors']
