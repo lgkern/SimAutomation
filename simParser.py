@@ -1,9 +1,3 @@
-# Requires the package 'beautifulsoup4'
-#
-# Installed using 
-#      pip install beautifulsoup4
-# on the command line
-
 from optparse import OptionParser
 import os
 import json
