@@ -1,6 +1,7 @@
 import sys
 from optparse import OptionParser
 from subprocess import call
+from os import path
 
 def sim(profile, fight, iterations=10000, scaleFactors=0, time=300, variance=0.1, bossCount=1, cores=4, outputFile=None, logFile=None, optimalRaid=True, disableBloodlust=False, plotStats=None, plotPoints=20, plotStep=160.0, plotTargetError=0.1, xmlFile = None, jsonFile = None):
     print("simming!")
@@ -13,11 +14,11 @@ def sim(profile, fight, iterations=10000, scaleFactors=0, time=300, variance=0.1
         if plotTargetError != 0.1:
             arguments+=' dps_plot_target_error={0}'.format(plotTargetError) 
     if outputFile:
-        arguments+=' html={0}.html'.format(outputFile+'.'+profile+'.'+fight+'.'+bossCount+'.'+time)
+        arguments+=' html={0}.html'.format(outputFile+'_'+profile+'_'+fight+'_'+bossCount+'_'+time)
     if xmlFile:
-        arguments+=' xml={0}.xml'.format(xmlFile+'.'+profile+'.'+fight+'.'+bossCount+'.'+time)
+        arguments+=' xml={0}.xml'.format(xmlFile+'_'+profile+'_'+fight+'_'+bossCount+'_'+time)
     if jsonFile:
-        arguments+=' json={0}.json'.format(jsonFile+'.'+profile+'.'+fight+'.'+bossCount+'.'+time)
+        arguments+=' json={0}.json'.format(jsonFile+'_'+profile+'_'+fight+'_'+bossCount+'_'+time)
     arguments+=' {0}'.format(profile)
     if logFile:
        arguments+=' > {0}.log'.format(logFile)
@@ -69,7 +70,7 @@ def main():
     if not options.profilename:
         print('Invalid profile name, please provide a valid one')
         return
-    
+            
     times = str(options.time) if not isinstance(options.time,str) else options.time
     
     for time in times.split(","):
@@ -77,9 +78,9 @@ def main():
             for fight in options.fights.split(","):
                 if isinstance(options.bosses,str):
                     for bossCount in options.bosses.split(","):
-                        sim(profile, fight_reader(fight), options.iterations, 1 if options.scaleFactors else 0, time, options.variance, bossCount, options.cores, options.outputFile, options.logFile, options.optimalRaid, options.disableBloodlust, options.plotStats, options.plotPoints, options.plotStep, options.plotTargetError, options.xmlFile, options.jsonFile)
+                        sim(profile, fight_reader(fight), options.iterations, 1 if options.scaleFactors else 0, time, options.variance, bossCount, options.cores, path.splitext(options.outputFile)[0], options.logFile, options.optimalRaid, options.disableBloodlust, options.plotStats, options.plotPoints, options.plotStep, options.plotTargetError, path.splitext(options.xmlFile)[0], path.splitext(options.jsonFile)[0])
                 else:
-                    sim(profile, fight_reader(fight), options.iterations, 1 if options.scaleFactors else 0, time, options.variance, options.bosses, options.cores, options.outputFile, options.logFile, options.optimalRaid, options.disableBloodlust, options.plotStats, options.plotPoints, options.plotStep, options.plotTargetError, options.xmlFile, options.jsonFile)
+                    sim(profile, fight_reader(fight), options.iterations, 1 if options.scaleFactors else 0, time, options.variance, options.bosses, options.cores, options.outputFile, options.logFile, options.optimalRaid, options.disableBloodlust, options.plotStats, options.plotPoints, options.plotStep, options.plotTargetError, path.splitext(options.xmlFile)[0], path.splitext(options.jsonFile)[0])
 
 if __name__ == "__main__":
     main()
