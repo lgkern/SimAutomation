@@ -62,8 +62,8 @@ def main():
     parser.add_option("-z", "--plot-points", dest="plotPoints", help="the number of points to use to create the plot graph.", default=20)   
     parser.add_option("-e", "--plot-steps", dest="plotStep", help=" is the delta between two points of the plot graph.", default=160.0)   
     parser.add_option("-a", "--plot-target-error", dest="plotTargetError", help=" hopefully this works!", default=0.1)   
-    parser.add_option("-x", "--xml", dest="xmlFile", help="the xml output file name (base xml output file name for multiple simulations)", default=None) 
-    parser.add_option("-j", "--json", dest="jsonFile", help="the json output file name (base json output file name for multiple simulations)", default=None) 
+    parser.add_option("-x", "--xml", dest="xmlFile", help="the xml output file name (base xml output file name for multiple simulations)", default='') 
+    parser.add_option("-j", "--json", dest="jsonFile", help="the json output file name (base json output file name for multiple simulations)", default='') 
 
     (options, args) = parser.parse_args()
 
