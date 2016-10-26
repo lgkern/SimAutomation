@@ -13,10 +13,12 @@ def parse(filename, isCsv, hideHeaders):
     with open(filename, "r") as f:
         s = f.read()
         sim = json.loads(s)
+        i = 0
         for player in sim['sim']['players']:
             if 'Int' in player['scale_factors']:
+                i += 1
                 if(hideHeaders):
-                    ret+= path.splitext(filename)[0]+separator
+                    ret+= path.splitext(filename)[0]+'_'+str(i)+separator
                 else:
                     ret+= player['name'] + separator
                 ret+= '{0:.{1}f}'.format(player['collected_data']['dmg']['mean'],2) + separator
