@@ -3,7 +3,7 @@ import os
 import json
 from os import path
 
-def parse(filename, isCsv, hideHeaders):
+def parse(filename, isCsv, hideHeaders, hideProfiles, hideActors):
     separator = ',' if isCsv else '\t'
     if(hideHeaders):
         ret = ''
@@ -13,13 +13,11 @@ def parse(filename, isCsv, hideHeaders):
     with open(filename, "r") as f:
         s = f.read()
         sim = json.loads(s)
-        i = 0
         for player in sim['sim']['players']:
-            if 'Int' in player['scale_factors']:
-                i += 1
-                if(hideHeaders):
-                    ret+= path.splitext(filename)[0]+'_'+str(i)+separator
-                else:
+            if 'Int' in player['scale_factors']:                 
+                if(not hideProfiles):
+                    ret+= path.splitext(filename)[0]+separator
+                if(not hideActors):
                     ret+= player['name'] + separator
                 ret+= '{0:.{1}f}'.format(player['collected_data']['dmg']['mean'],2) + separator
                 ret+= '{0:.{1}f}'.format(player['collected_data']['dps']['mean'],2) + separator
@@ -40,6 +38,8 @@ def main():
     parser.add_option("-o", "--output", dest="output", default = 'statweights.txt', help="the output file to be created. Will overwrite if the file already exists")
     parser.add_option("-c", "--csv",  action="store_true", dest="csv", default = False, help="Checks if the output file should be in the CSV format or TXT")
     parser.add_option("-r", "--hide-headers",  action="store_true", dest="hideHeaders", default = False, help="hides the headers from files for better sheet export")
+    parser.add_option("-a", "--hide-actors",  action="store_true", dest="hideActors", default = False, help="hides the actors column in the output file")
+    parser.add_option("-f", "--hide-profiles",  action="store_true", dest="hideProfiles", default = False, help="hides the profiles column in the output file")
     (options, args) = parser.parse_args()
     
     if options.directory != None:
@@ -47,13 +47,18 @@ def main():
     
     separator = ',' if options.csv else '\t'
     
-    parses = '' if not options.hideHeaders else 'actor'+separator+'DD'+separator+'DPS'+separator+'int'+separator+'haste'+separator+'crit'+separator+'mastery'+separator+'vers\n'
     
-    print(options.prefix)
+    parses = '' 
+    if options.hideHeaders:
+        if not options.hideProfiles:
+            parses += 'profile'+separator
+        if not options.hideActors:
+            parses += 'actor'+separator
+        parses += 'DD'+separator+'DPS'+separator+'int'+separator+'haste'+separator+'crit'+separator+'mastery'+separator+'vers\n'
     
     for filename in os.listdir(os.getcwd()):
         if filename.startswith(options.prefix) and filename.endswith('.json'):
-            parses += parse(filename, options.csv, options.hideHeaders)
+            parses += parse(filename, options.csv, options.hideHeaders, options.hideProfiles, options.hideActors)
             
     with open(options.output, "w") as ofile:
         print(parses, file=ofile)
