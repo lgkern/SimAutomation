@@ -1,0 +1,9 @@
+priest="No_Talents"
+level=110
+race=troll
+role=spell
+priest_ignore_healing=1
+position=back
+talents=0000000
+artifact=47:0:0:0:0:764:1:765:1:766:1:767:3:768:1:769:1:770:1:771:3:772:3:773:3:774:3:775:3:776:3:777:3:778:3:779:1:1347:1:1381:20
+spec=shadow
