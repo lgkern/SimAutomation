@@ -1,728 +1,728 @@
-copy=1001111
-talents=LotV_PI_SL_LI_ToF
+copy=LotV_PI_SL_LI_ToF
 
-copy=1001112
-talents=SC_PI_SL_LI_ToF
+talents=1001111
+copy=SC_PI_SL_LI_ToF
 
-copy=1001113
-talents=S2M_PI_SL_LI_ToF
+talents=1001112
+copy=S2M_PI_SL_LI_ToF
 
-copy=1001121
-talents=LotV_Ms_SL_LI_ToF
+talents=1001113
+copy=LotV_Ms_SL_LI_ToF
 
-copy=1001122
-talents=SC_Ms_SL_LI_ToF
+talents=1001121
+copy=SC_Ms_SL_LI_ToF
 
-copy=1001123
-talents=S2M_Ms_SL_LI_ToF
+talents=1001122
+copy=S2M_Ms_SL_LI_ToF
 
-copy=1001131
-talents=LotV_Mb_SL_LI_ToF
+talents=1001123
+copy=LotV_Mb_SL_LI_ToF
 
-copy=1001132
-talents=SC_Mb_SL_LI_ToF
+talents=1001131
+copy=SC_Mb_SL_LI_ToF
 
-copy=1001133
-talents=S2M_Mb_SL_LI_ToF
+talents=1001132
+copy=S2M_Mb_SL_LI_ToF
 
-copy=1001211
-talents=LotV_PI_AS_LI_ToF
+talents=1001133
+copy=LotV_PI_AS_LI_ToF
 
-copy=1001212
-talents=SC_PI_AS_LI_ToF
+talents=1001211
+copy=SC_PI_AS_LI_ToF
 
-copy=1001213
-talents=S2M_PI_AS_LI_ToF
+talents=1001212
+copy=S2M_PI_AS_LI_ToF
 
-copy=1001221
-talents=LotV_Ms_AS_LI_ToF
+talents=1001213
+copy=LotV_Ms_AS_LI_ToF
 
-copy=1001222
-talents=SC_Ms_AS_LI_ToF
+talents=1001221
+copy=SC_Ms_AS_LI_ToF
 
-copy=1001223
-talents=S2M_Ms_AS_LI_ToF
+talents=1001222
+copy=S2M_Ms_AS_LI_ToF
 
-copy=1001231
-talents=LotV_Mb_AS_LI_ToF
+talents=1001223
+copy=LotV_Mb_AS_LI_ToF
 
-copy=1001232
-talents=SC_Mb_AS_LI_ToF
+talents=1001231
+copy=SC_Mb_AS_LI_ToF
 
-copy=1001233
-talents=S2M_Mb_AS_LI_ToF
+talents=1001232
+copy=S2M_Mb_AS_LI_ToF
 
-copy=1001311
-talents=LotV_PI_SI_LI_ToF
+talents=1001233
+copy=LotV_PI_SI_LI_ToF
 
-copy=1001312
-talents=SC_PI_SI_LI_ToF
+talents=1001311
+copy=SC_PI_SI_LI_ToF
 
-copy=1001313
-talents=S2M_PI_SI_LI_ToF
+talents=1001312
+copy=S2M_PI_SI_LI_ToF
 
-copy=1001321
-talents=LotV_Ms_SI_LI_ToF
+talents=1001313
+copy=LotV_Ms_SI_LI_ToF
 
-copy=1001322
-talents=SC_Ms_SI_LI_ToF
+talents=1001321
+copy=SC_Ms_SI_LI_ToF
 
-copy=1001323
-talents=S2M_Ms_SI_LI_ToF
+talents=1001322
+copy=S2M_Ms_SI_LI_ToF
 
-copy=1001331
-talents=LotV_Mb_SI_LI_ToF
+talents=1001323
+copy=LotV_Mb_SI_LI_ToF
 
-copy=1001332
-talents=SC_Mb_SI_LI_ToF
+talents=1001331
+copy=SC_Mb_SI_LI_ToF
 
-copy=1001333
-talents=S2M_Mb_SI_LI_ToF
+talents=1001332
+copy=S2M_Mb_SI_LI_ToF
 
-copy=1002111
-talents=LotV_PI_SL_RoS_ToF
+talents=1001333
+copy=LotV_PI_SL_RoS_ToF
 
-copy=1002112
-talents=SC_PI_SL_RoS_ToF
+talents=1002111
+copy=SC_PI_SL_RoS_ToF
 
-copy=1002113
-talents=S2M_PI_SL_RoS_ToF
+talents=1002112
+copy=S2M_PI_SL_RoS_ToF
 
-copy=1002121
-talents=LotV_Ms_SL_RoS_ToF
+talents=1002113
+copy=LotV_Ms_SL_RoS_ToF
 
-copy=1002122
-talents=SC_Ms_SL_RoS_ToF
+talents=1002121
+copy=SC_Ms_SL_RoS_ToF
 
-copy=1002123
-talents=S2M_Ms_SL_RoS_ToF
+talents=1002122
+copy=S2M_Ms_SL_RoS_ToF
 
-copy=1002131
-talents=LotV_Mb_SL_RoS_ToF
+talents=1002123
+copy=LotV_Mb_SL_RoS_ToF
 
-copy=1002132
-talents=SC_Mb_SL_RoS_ToF
+talents=1002131
+copy=SC_Mb_SL_RoS_ToF
 
-copy=1002133
-talents=S2M_Mb_SL_RoS_ToF
+talents=1002132
+copy=S2M_Mb_SL_RoS_ToF
 
-copy=1002211
-talents=LotV_PI_AS_RoS_ToF
+talents=1002133
+copy=LotV_PI_AS_RoS_ToF
 
-copy=1002212
-talents=SC_PI_AS_RoS_ToF
+talents=1002211
+copy=SC_PI_AS_RoS_ToF
 
-copy=1002213
-talents=S2M_PI_AS_RoS_ToF
+talents=1002212
+copy=S2M_PI_AS_RoS_ToF
 
-copy=1002221
-talents=LotV_Ms_AS_RoS_ToF
+talents=1002213
+copy=LotV_Ms_AS_RoS_ToF
 
-copy=1002222
-talents=SC_Ms_AS_RoS_ToF
+talents=1002221
+copy=SC_Ms_AS_RoS_ToF
 
-copy=1002223
-talents=S2M_Ms_AS_RoS_ToF
+talents=1002222
+copy=S2M_Ms_AS_RoS_ToF
 
-copy=1002231
-talents=LotV_Mb_AS_RoS_ToF
+talents=1002223
+copy=LotV_Mb_AS_RoS_ToF
 
-copy=1002232
-talents=SC_Mb_AS_RoS_ToF
+talents=1002231
+copy=SC_Mb_AS_RoS_ToF
 
-copy=1002233
-talents=S2M_Mb_AS_RoS_ToF
+talents=1002232
+copy=S2M_Mb_AS_RoS_ToF
 
-copy=1002311
-talents=LotV_PI_SI_RoS_ToF
+talents=1002233
+copy=LotV_PI_SI_RoS_ToF
 
-copy=1002312
-talents=SC_PI_SI_RoS_ToF
+talents=1002311
+copy=SC_PI_SI_RoS_ToF
 
-copy=1002313
-talents=S2M_PI_SI_RoS_ToF
+talents=1002312
+copy=S2M_PI_SI_RoS_ToF
 
-copy=1002321
-talents=LotV_Ms_SI_RoS_ToF
+talents=1002313
+copy=LotV_Ms_SI_RoS_ToF
 
-copy=1002322
-talents=SC_Ms_SI_RoS_ToF
+talents=1002321
+copy=SC_Ms_SI_RoS_ToF
 
-copy=1002323
-talents=S2M_Ms_SI_RoS_ToF
+talents=1002322
+copy=S2M_Ms_SI_RoS_ToF
 
-copy=1002331
-talents=LotV_Mb_SI_RoS_ToF
+talents=1002323
+copy=LotV_Mb_SI_RoS_ToF
 
-copy=1002332
-talents=SC_Mb_SI_RoS_ToF
+talents=1002331
+copy=SC_Mb_SI_RoS_ToF
 
-copy=1002333
-talents=S2M_Mb_SI_RoS_ToF
+talents=1002332
+copy=S2M_Mb_SI_RoS_ToF
 
-copy=1003111
-talents=LotV_PI_SL_VR_ToF
+talents=1002333
+copy=LotV_PI_SL_VR_ToF
 
-copy=1003112
-talents=SC_PI_SL_VR_ToF
+talents=1003111
+copy=SC_PI_SL_VR_ToF
 
-copy=1003113
-talents=S2M_PI_SL_VR_ToF
+talents=1003112
+copy=S2M_PI_SL_VR_ToF
 
-copy=1003121
-talents=LotV_Ms_SL_VR_ToF
+talents=1003113
+copy=LotV_Ms_SL_VR_ToF
 
-copy=1003122
-talents=SC_Ms_SL_VR_ToF
+talents=1003121
+copy=SC_Ms_SL_VR_ToF
 
-copy=1003123
-talents=S2M_Ms_SL_VR_ToF
+talents=1003122
+copy=S2M_Ms_SL_VR_ToF
 
-copy=1003131
-talents=LotV_Mb_SL_VR_ToF
+talents=1003123
+copy=LotV_Mb_SL_VR_ToF
 
-copy=1003132
-talents=SC_Mb_SL_VR_ToF
+talents=1003131
+copy=SC_Mb_SL_VR_ToF
 
-copy=1003133
-talents=S2M_Mb_SL_VR_ToF
+talents=1003132
+copy=S2M_Mb_SL_VR_ToF
 
-copy=1003211
-talents=LotV_PI_AS_VR_ToF
+talents=1003133
+copy=LotV_PI_AS_VR_ToF
 
-copy=1003212
-talents=SC_PI_AS_VR_ToF
+talents=1003211
+copy=SC_PI_AS_VR_ToF
 
-copy=1003213
-talents=S2M_PI_AS_VR_ToF
+talents=1003212
+copy=S2M_PI_AS_VR_ToF
 
-copy=1003221
-talents=LotV_Ms_AS_VR_ToF
+talents=1003213
+copy=LotV_Ms_AS_VR_ToF
 
-copy=1003222
-talents=SC_Ms_AS_VR_ToF
+talents=1003221
+copy=SC_Ms_AS_VR_ToF
 
-copy=1003223
-talents=S2M_Ms_AS_VR_ToF
+talents=1003222
+copy=S2M_Ms_AS_VR_ToF
 
-copy=1003231
-talents=LotV_Mb_AS_VR_ToF
+talents=1003223
+copy=LotV_Mb_AS_VR_ToF
 
-copy=1003232
-talents=SC_Mb_AS_VR_ToF
+talents=1003231
+copy=SC_Mb_AS_VR_ToF
 
-copy=1003233
-talents=S2M_Mb_AS_VR_ToF
+talents=1003232
+copy=S2M_Mb_AS_VR_ToF
 
-copy=1003311
-talents=LotV_PI_SI_VR_ToF
+talents=1003233
+copy=LotV_PI_SI_VR_ToF
 
-copy=1003312
-talents=SC_PI_SI_VR_ToF
+talents=1003311
+copy=SC_PI_SI_VR_ToF
 
-copy=1003313
-talents=S2M_PI_SI_VR_ToF
+talents=1003312
+copy=S2M_PI_SI_VR_ToF
 
-copy=1003321
-talents=LotV_Ms_SI_VR_ToF
+talents=1003313
+copy=LotV_Ms_SI_VR_ToF
 
-copy=1003322
-talents=SC_Ms_SI_VR_ToF
+talents=1003321
+copy=SC_Ms_SI_VR_ToF
 
-copy=1003323
-talents=S2M_Ms_SI_VR_ToF
+talents=1003322
+copy=S2M_Ms_SI_VR_ToF
 
-copy=1003331
-talents=LotV_Mb_SI_VR_ToF
+talents=1003323
+copy=LotV_Mb_SI_VR_ToF
 
-copy=1003332
-talents=SC_Mb_SI_VR_ToF
+talents=1003331
+copy=SC_Mb_SI_VR_ToF
 
-copy=1003333
-talents=S2M_Mb_SI_VR_ToF
+talents=1003332
+copy=S2M_Mb_SI_VR_ToF
 
-copy=2001111
-talents=LotV_PI_SL_LI_FotM
+talents=1003333
+copy=LotV_PI_SL_LI_FotM
 
-copy=2001112
-talents=SC_PI_SL_LI_FotM
+talents=2001111
+copy=SC_PI_SL_LI_FotM
 
-copy=2001113
-talents=S2M_PI_SL_LI_FotM
+talents=2001112
+copy=S2M_PI_SL_LI_FotM
 
-copy=2001121
-talents=LotV_Ms_SL_LI_FotM
+talents=2001113
+copy=LotV_Ms_SL_LI_FotM
 
-copy=2001122
-talents=SC_Ms_SL_LI_FotM
+talents=2001121
+copy=SC_Ms_SL_LI_FotM
 
-copy=2001123
-talents=S2M_Ms_SL_LI_FotM
+talents=2001122
+copy=S2M_Ms_SL_LI_FotM
 
-copy=2001131
-talents=LotV_Mb_SL_LI_FotM
+talents=2001123
+copy=LotV_Mb_SL_LI_FotM
 
-copy=2001132
-talents=SC_Mb_SL_LI_FotM
+talents=2001131
+copy=SC_Mb_SL_LI_FotM
 
-copy=2001133
-talents=S2M_Mb_SL_LI_FotM
+talents=2001132
+copy=S2M_Mb_SL_LI_FotM
 
-copy=2001211
-talents=LotV_PI_AS_LI_FotM
+talents=2001133
+copy=LotV_PI_AS_LI_FotM
 
-copy=2001212
-talents=SC_PI_AS_LI_FotM
+talents=2001211
+copy=SC_PI_AS_LI_FotM
 
-copy=2001213
-talents=S2M_PI_AS_LI_FotM
+talents=2001212
+copy=S2M_PI_AS_LI_FotM
 
-copy=2001221
-talents=LotV_Ms_AS_LI_FotM
+talents=2001213
+copy=LotV_Ms_AS_LI_FotM
 
-copy=2001222
-talents=SC_Ms_AS_LI_FotM
+talents=2001221
+copy=SC_Ms_AS_LI_FotM
 
-copy=2001223
-talents=S2M_Ms_AS_LI_FotM
+talents=2001222
+copy=S2M_Ms_AS_LI_FotM
 
-copy=2001231
-talents=LotV_Mb_AS_LI_FotM
+talents=2001223
+copy=LotV_Mb_AS_LI_FotM
 
-copy=2001232
-talents=SC_Mb_AS_LI_FotM
+talents=2001231
+copy=SC_Mb_AS_LI_FotM
 
-copy=2001233
-talents=S2M_Mb_AS_LI_FotM
+talents=2001232
+copy=S2M_Mb_AS_LI_FotM
 
-copy=2001311
-talents=LotV_PI_SI_LI_FotM
+talents=2001233
+copy=LotV_PI_SI_LI_FotM
 
-copy=2001312
-talents=SC_PI_SI_LI_FotM
+talents=2001311
+copy=SC_PI_SI_LI_FotM
 
-copy=2001313
-talents=S2M_PI_SI_LI_FotM
+talents=2001312
+copy=S2M_PI_SI_LI_FotM
 
-copy=2001321
-talents=LotV_Ms_SI_LI_FotM
+talents=2001313
+copy=LotV_Ms_SI_LI_FotM
 
-copy=2001322
-talents=SC_Ms_SI_LI_FotM
+talents=2001321
+copy=SC_Ms_SI_LI_FotM
 
-copy=2001323
-talents=S2M_Ms_SI_LI_FotM
+talents=2001322
+copy=S2M_Ms_SI_LI_FotM
 
-copy=2001331
-talents=LotV_Mb_SI_LI_FotM
+talents=2001323
+copy=LotV_Mb_SI_LI_FotM
 
-copy=2001332
-talents=SC_Mb_SI_LI_FotM
+talents=2001331
+copy=SC_Mb_SI_LI_FotM
 
-copy=2001333
-talents=S2M_Mb_SI_LI_FotM
+talents=2001332
+copy=S2M_Mb_SI_LI_FotM
 
-copy=2002111
-talents=LotV_PI_SL_RoS_FotM
+talents=2001333
+copy=LotV_PI_SL_RoS_FotM
 
-copy=2002112
-talents=SC_PI_SL_RoS_FotM
+talents=2002111
+copy=SC_PI_SL_RoS_FotM
 
-copy=2002113
-talents=S2M_PI_SL_RoS_FotM
+talents=2002112
+copy=S2M_PI_SL_RoS_FotM
 
-copy=2002121
-talents=LotV_Ms_SL_RoS_FotM
+talents=2002113
+copy=LotV_Ms_SL_RoS_FotM
 
-copy=2002122
-talents=SC_Ms_SL_RoS_FotM
+talents=2002121
+copy=SC_Ms_SL_RoS_FotM
 
-copy=2002123
-talents=S2M_Ms_SL_RoS_FotM
+talents=2002122
+copy=S2M_Ms_SL_RoS_FotM
 
-copy=2002131
-talents=LotV_Mb_SL_RoS_FotM
+talents=2002123
+copy=LotV_Mb_SL_RoS_FotM
 
-copy=2002132
-talents=SC_Mb_SL_RoS_FotM
+talents=2002131
+copy=SC_Mb_SL_RoS_FotM
 
-copy=2002133
-talents=S2M_Mb_SL_RoS_FotM
+talents=2002132
+copy=S2M_Mb_SL_RoS_FotM
 
-copy=2002211
-talents=LotV_PI_AS_RoS_FotM
+talents=2002133
+copy=LotV_PI_AS_RoS_FotM
 
-copy=2002212
-talents=SC_PI_AS_RoS_FotM
+talents=2002211
+copy=SC_PI_AS_RoS_FotM
 
-copy=2002213
-talents=S2M_PI_AS_RoS_FotM
+talents=2002212
+copy=S2M_PI_AS_RoS_FotM
 
-copy=2002221
-talents=LotV_Ms_AS_RoS_FotM
+talents=2002213
+copy=LotV_Ms_AS_RoS_FotM
 
-copy=2002222
-talents=SC_Ms_AS_RoS_FotM
+talents=2002221
+copy=SC_Ms_AS_RoS_FotM
 
-copy=2002223
-talents=S2M_Ms_AS_RoS_FotM
+talents=2002222
+copy=S2M_Ms_AS_RoS_FotM
 
-copy=2002231
-talents=LotV_Mb_AS_RoS_FotM
+talents=2002223
+copy=LotV_Mb_AS_RoS_FotM
 
-copy=2002232
-talents=SC_Mb_AS_RoS_FotM
+talents=2002231
+copy=SC_Mb_AS_RoS_FotM
 
-copy=2002233
-talents=S2M_Mb_AS_RoS_FotM
+talents=2002232
+copy=S2M_Mb_AS_RoS_FotM
 
-copy=2002311
-talents=LotV_PI_SI_RoS_FotM
+talents=2002233
+copy=LotV_PI_SI_RoS_FotM
 
-copy=2002312
-talents=SC_PI_SI_RoS_FotM
+talents=2002311
+copy=SC_PI_SI_RoS_FotM
 
-copy=2002313
-talents=S2M_PI_SI_RoS_FotM
+talents=2002312
+copy=S2M_PI_SI_RoS_FotM
 
-copy=2002321
-talents=LotV_Ms_SI_RoS_FotM
+talents=2002313
+copy=LotV_Ms_SI_RoS_FotM
 
-copy=2002322
-talents=SC_Ms_SI_RoS_FotM
+talents=2002321
+copy=SC_Ms_SI_RoS_FotM
 
-copy=2002323
-talents=S2M_Ms_SI_RoS_FotM
+talents=2002322
+copy=S2M_Ms_SI_RoS_FotM
 
-copy=2002331
-talents=LotV_Mb_SI_RoS_FotM
+talents=2002323
+copy=LotV_Mb_SI_RoS_FotM
 
-copy=2002332
-talents=SC_Mb_SI_RoS_FotM
+talents=2002331
+copy=SC_Mb_SI_RoS_FotM
 
-copy=2002333
-talents=S2M_Mb_SI_RoS_FotM
+talents=2002332
+copy=S2M_Mb_SI_RoS_FotM
 
-copy=2003111
-talents=LotV_PI_SL_VR_FotM
+talents=2002333
+copy=LotV_PI_SL_VR_FotM
 
-copy=2003112
-talents=SC_PI_SL_VR_FotM
+talents=2003111
+copy=SC_PI_SL_VR_FotM
 
-copy=2003113
-talents=S2M_PI_SL_VR_FotM
+talents=2003112
+copy=S2M_PI_SL_VR_FotM
 
-copy=2003121
-talents=LotV_Ms_SL_VR_FotM
+talents=2003113
+copy=LotV_Ms_SL_VR_FotM
 
-copy=2003122
-talents=SC_Ms_SL_VR_FotM
+talents=2003121
+copy=SC_Ms_SL_VR_FotM
 
-copy=2003123
-talents=S2M_Ms_SL_VR_FotM
+talents=2003122
+copy=S2M_Ms_SL_VR_FotM
 
-copy=2003131
-talents=LotV_Mb_SL_VR_FotM
+talents=2003123
+copy=LotV_Mb_SL_VR_FotM
 
-copy=2003132
-talents=SC_Mb_SL_VR_FotM
+talents=2003131
+copy=SC_Mb_SL_VR_FotM
 
-copy=2003133
-talents=S2M_Mb_SL_VR_FotM
+talents=2003132
+copy=S2M_Mb_SL_VR_FotM
 
-copy=2003211
-talents=LotV_PI_AS_VR_FotM
+talents=2003133
+copy=LotV_PI_AS_VR_FotM
 
-copy=2003212
-talents=SC_PI_AS_VR_FotM
+talents=2003211
+copy=SC_PI_AS_VR_FotM
 
-copy=2003213
-talents=S2M_PI_AS_VR_FotM
+talents=2003212
+copy=S2M_PI_AS_VR_FotM
 
-copy=2003221
-talents=LotV_Ms_AS_VR_FotM
+talents=2003213
+copy=LotV_Ms_AS_VR_FotM
 
-copy=2003222
-talents=SC_Ms_AS_VR_FotM
+talents=2003221
+copy=SC_Ms_AS_VR_FotM
 
-copy=2003223
-talents=S2M_Ms_AS_VR_FotM
+talents=2003222
+copy=S2M_Ms_AS_VR_FotM
 
-copy=2003231
-talents=LotV_Mb_AS_VR_FotM
+talents=2003223
+copy=LotV_Mb_AS_VR_FotM
 
-copy=2003232
-talents=SC_Mb_AS_VR_FotM
+talents=2003231
+copy=SC_Mb_AS_VR_FotM
 
-copy=2003233
-talents=S2M_Mb_AS_VR_FotM
+talents=2003232
+copy=S2M_Mb_AS_VR_FotM
 
-copy=2003311
-talents=LotV_PI_SI_VR_FotM
+talents=2003233
+copy=LotV_PI_SI_VR_FotM
 
-copy=2003312
-talents=SC_PI_SI_VR_FotM
+talents=2003311
+copy=SC_PI_SI_VR_FotM
 
-copy=2003313
-talents=S2M_PI_SI_VR_FotM
+talents=2003312
+copy=S2M_PI_SI_VR_FotM
 
-copy=2003321
-talents=LotV_Ms_SI_VR_FotM
+talents=2003313
+copy=LotV_Ms_SI_VR_FotM
 
-copy=2003322
-talents=SC_Ms_SI_VR_FotM
+talents=2003321
+copy=SC_Ms_SI_VR_FotM
 
-copy=2003323
-talents=S2M_Ms_SI_VR_FotM
+talents=2003322
+copy=S2M_Ms_SI_VR_FotM
 
-copy=2003331
-talents=LotV_Mb_SI_VR_FotM
+talents=2003323
+copy=LotV_Mb_SI_VR_FotM
 
-copy=2003332
-talents=SC_Mb_SI_VR_FotM
+talents=2003331
+copy=SC_Mb_SI_VR_FotM
 
-copy=2003333
-talents=S2M_Mb_SI_VR_FotM
+talents=2003332
+copy=S2M_Mb_SI_VR_FotM
 
-copy=3001111
-talents=LotV_PI_SL_LI_SWV
+talents=2003333
+copy=LotV_PI_SL_LI_SWV
 
-copy=3001112
-talents=SC_PI_SL_LI_SWV
+talents=3001111
+copy=SC_PI_SL_LI_SWV
 
-copy=3001113
-talents=S2M_PI_SL_LI_SWV
+talents=3001112
+copy=S2M_PI_SL_LI_SWV
 
-copy=3001121
-talents=LotV_Ms_SL_LI_SWV
+talents=3001113
+copy=LotV_Ms_SL_LI_SWV
 
-copy=3001122
-talents=SC_Ms_SL_LI_SWV
+talents=3001121
+copy=SC_Ms_SL_LI_SWV
 
-copy=3001123
-talents=S2M_Ms_SL_LI_SWV
+talents=3001122
+copy=S2M_Ms_SL_LI_SWV
 
-copy=3001131
-talents=LotV_Mb_SL_LI_SWV
+talents=3001123
+copy=LotV_Mb_SL_LI_SWV
 
-copy=3001132
-talents=SC_Mb_SL_LI_SWV
+talents=3001131
+copy=SC_Mb_SL_LI_SWV
 
-copy=3001133
-talents=S2M_Mb_SL_LI_SWV
+talents=3001132
+copy=S2M_Mb_SL_LI_SWV
 
-copy=3001211
-talents=LotV_PI_AS_LI_SWV
+talents=3001133
+copy=LotV_PI_AS_LI_SWV
 
-copy=3001212
-talents=SC_PI_AS_LI_SWV
+talents=3001211
+copy=SC_PI_AS_LI_SWV
 
-copy=3001213
-talents=S2M_PI_AS_LI_SWV
+talents=3001212
+copy=S2M_PI_AS_LI_SWV
 
-copy=3001221
-talents=LotV_Ms_AS_LI_SWV
+talents=3001213
+copy=LotV_Ms_AS_LI_SWV
 
-copy=3001222
-talents=SC_Ms_AS_LI_SWV
+talents=3001221
+copy=SC_Ms_AS_LI_SWV
 
-copy=3001223
-talents=S2M_Ms_AS_LI_SWV
+talents=3001222
+copy=S2M_Ms_AS_LI_SWV
 
-copy=3001231
-talents=LotV_Mb_AS_LI_SWV
+talents=3001223
+copy=LotV_Mb_AS_LI_SWV
 
-copy=3001232
-talents=SC_Mb_AS_LI_SWV
+talents=3001231
+copy=SC_Mb_AS_LI_SWV
 
-copy=3001233
-talents=S2M_Mb_AS_LI_SWV
+talents=3001232
+copy=S2M_Mb_AS_LI_SWV
 
-copy=3001311
-talents=LotV_PI_SI_LI_SWV
+talents=3001233
+copy=LotV_PI_SI_LI_SWV
 
-copy=3001312
-talents=SC_PI_SI_LI_SWV
+talents=3001311
+copy=SC_PI_SI_LI_SWV
 
-copy=3001313
-talents=S2M_PI_SI_LI_SWV
+talents=3001312
+copy=S2M_PI_SI_LI_SWV
 
-copy=3001321
-talents=LotV_Ms_SI_LI_SWV
+talents=3001313
+copy=LotV_Ms_SI_LI_SWV
 
-copy=3001322
-talents=SC_Ms_SI_LI_SWV
+talents=3001321
+copy=SC_Ms_SI_LI_SWV
 
-copy=3001323
-talents=S2M_Ms_SI_LI_SWV
+talents=3001322
+copy=S2M_Ms_SI_LI_SWV
 
-copy=3001331
-talents=LotV_Mb_SI_LI_SWV
+talents=3001323
+copy=LotV_Mb_SI_LI_SWV
 
-copy=3001332
-talents=SC_Mb_SI_LI_SWV
+talents=3001331
+copy=SC_Mb_SI_LI_SWV
 
-copy=3001333
-talents=S2M_Mb_SI_LI_SWV
+talents=3001332
+copy=S2M_Mb_SI_LI_SWV
 
-copy=3002111
-talents=LotV_PI_SL_RoS_SWV
+talents=3001333
+copy=LotV_PI_SL_RoS_SWV
 
-copy=3002112
-talents=SC_PI_SL_RoS_SWV
+talents=3002111
+copy=SC_PI_SL_RoS_SWV
 
-copy=3002113
-talents=S2M_PI_SL_RoS_SWV
+talents=3002112
+copy=S2M_PI_SL_RoS_SWV
 
-copy=3002121
-talents=LotV_Ms_SL_RoS_SWV
+talents=3002113
+copy=LotV_Ms_SL_RoS_SWV
 
-copy=3002122
-talents=SC_Ms_SL_RoS_SWV
+talents=3002121
+copy=SC_Ms_SL_RoS_SWV
 
-copy=3002123
-talents=S2M_Ms_SL_RoS_SWV
+talents=3002122
+copy=S2M_Ms_SL_RoS_SWV
 
-copy=3002131
-talents=LotV_Mb_SL_RoS_SWV
+talents=3002123
+copy=LotV_Mb_SL_RoS_SWV
 
-copy=3002132
-talents=SC_Mb_SL_RoS_SWV
+talents=3002131
+copy=SC_Mb_SL_RoS_SWV
 
-copy=3002133
-talents=S2M_Mb_SL_RoS_SWV
+talents=3002132
+copy=S2M_Mb_SL_RoS_SWV
 
-copy=3002211
-talents=LotV_PI_AS_RoS_SWV
+talents=3002133
+copy=LotV_PI_AS_RoS_SWV
 
-copy=3002212
-talents=SC_PI_AS_RoS_SWV
+talents=3002211
+copy=SC_PI_AS_RoS_SWV
 
-copy=3002213
-talents=S2M_PI_AS_RoS_SWV
+talents=3002212
+copy=S2M_PI_AS_RoS_SWV
 
-copy=3002221
-talents=LotV_Ms_AS_RoS_SWV
+talents=3002213
+copy=LotV_Ms_AS_RoS_SWV
 
-copy=3002222
-talents=SC_Ms_AS_RoS_SWV
+talents=3002221
+copy=SC_Ms_AS_RoS_SWV
 
-copy=3002223
-talents=S2M_Ms_AS_RoS_SWV
+talents=3002222
+copy=S2M_Ms_AS_RoS_SWV
 
-copy=3002231
-talents=LotV_Mb_AS_RoS_SWV
+talents=3002223
+copy=LotV_Mb_AS_RoS_SWV
 
-copy=3002232
-talents=SC_Mb_AS_RoS_SWV
+talents=3002231
+copy=SC_Mb_AS_RoS_SWV
 
-copy=3002233
-talents=S2M_Mb_AS_RoS_SWV
+talents=3002232
+copy=S2M_Mb_AS_RoS_SWV
 
-copy=3002311
-talents=LotV_PI_SI_RoS_SWV
+talents=3002233
+copy=LotV_PI_SI_RoS_SWV
 
-copy=3002312
-talents=SC_PI_SI_RoS_SWV
+talents=3002311
+copy=SC_PI_SI_RoS_SWV
 
-copy=3002313
-talents=S2M_PI_SI_RoS_SWV
+talents=3002312
+copy=S2M_PI_SI_RoS_SWV
 
-copy=3002321
-talents=LotV_Ms_SI_RoS_SWV
+talents=3002313
+copy=LotV_Ms_SI_RoS_SWV
 
-copy=3002322
-talents=SC_Ms_SI_RoS_SWV
+talents=3002321
+copy=SC_Ms_SI_RoS_SWV
 
-copy=3002323
-talents=S2M_Ms_SI_RoS_SWV
+talents=3002322
+copy=S2M_Ms_SI_RoS_SWV
 
-copy=3002331
-talents=LotV_Mb_SI_RoS_SWV
+talents=3002323
+copy=LotV_Mb_SI_RoS_SWV
 
-copy=3002332
-talents=SC_Mb_SI_RoS_SWV
+talents=3002331
+copy=SC_Mb_SI_RoS_SWV
 
-copy=3002333
-talents=S2M_Mb_SI_RoS_SWV
+talents=3002332
+copy=S2M_Mb_SI_RoS_SWV
 
-copy=3003111
-talents=LotV_PI_SL_VR_SWV
+talents=3002333
+copy=LotV_PI_SL_VR_SWV
 
-copy=3003112
-talents=SC_PI_SL_VR_SWV
+talents=3003111
+copy=SC_PI_SL_VR_SWV
 
-copy=3003113
-talents=S2M_PI_SL_VR_SWV
+talents=3003112
+copy=S2M_PI_SL_VR_SWV
 
-copy=3003121
-talents=LotV_Ms_SL_VR_SWV
+talents=3003113
+copy=LotV_Ms_SL_VR_SWV
 
-copy=3003122
-talents=SC_Ms_SL_VR_SWV
+talents=3003121
+copy=SC_Ms_SL_VR_SWV
 
-copy=3003123
-talents=S2M_Ms_SL_VR_SWV
+talents=3003122
+copy=S2M_Ms_SL_VR_SWV
 
-copy=3003131
-talents=LotV_Mb_SL_VR_SWV
+talents=3003123
+copy=LotV_Mb_SL_VR_SWV
 
-copy=3003132
-talents=SC_Mb_SL_VR_SWV
+talents=3003131
+copy=SC_Mb_SL_VR_SWV
 
-copy=3003133
-talents=S2M_Mb_SL_VR_SWV
+talents=3003132
+copy=S2M_Mb_SL_VR_SWV
 
-copy=3003211
-talents=LotV_PI_AS_VR_SWV
+talents=3003133
+copy=LotV_PI_AS_VR_SWV
 
-copy=3003212
-talents=SC_PI_AS_VR_SWV
+talents=3003211
+copy=SC_PI_AS_VR_SWV
 
-copy=3003213
-talents=S2M_PI_AS_VR_SWV
+talents=3003212
+copy=S2M_PI_AS_VR_SWV
 
-copy=3003221
-talents=LotV_Ms_AS_VR_SWV
+talents=3003213
+copy=LotV_Ms_AS_VR_SWV
 
-copy=3003222
-talents=SC_Ms_AS_VR_SWV
+talents=3003221
+copy=SC_Ms_AS_VR_SWV
 
-copy=3003223
-talents=S2M_Ms_AS_VR_SWV
+talents=3003222
+copy=S2M_Ms_AS_VR_SWV
 
-copy=3003231
-talents=LotV_Mb_AS_VR_SWV
+talents=3003223
+copy=LotV_Mb_AS_VR_SWV
 
-copy=3003232
-talents=SC_Mb_AS_VR_SWV
+talents=3003231
+copy=SC_Mb_AS_VR_SWV
 
-copy=3003233
-talents=S2M_Mb_AS_VR_SWV
+talents=3003232
+copy=S2M_Mb_AS_VR_SWV
 
-copy=3003311
-talents=LotV_PI_SI_VR_SWV
+talents=3003233
+copy=LotV_PI_SI_VR_SWV
 
-copy=3003312
-talents=SC_PI_SI_VR_SWV
+talents=3003311
+copy=SC_PI_SI_VR_SWV
 
-copy=3003313
-talents=S2M_PI_SI_VR_SWV
+talents=3003312
+copy=S2M_PI_SI_VR_SWV
 
-copy=3003321
-talents=LotV_Ms_SI_VR_SWV
+talents=3003313
+copy=LotV_Ms_SI_VR_SWV
 
-copy=3003322
-talents=SC_Ms_SI_VR_SWV
+talents=3003321
+copy=SC_Ms_SI_VR_SWV
 
-copy=3003323
-talents=S2M_Ms_SI_VR_SWV
+talents=3003322
+copy=S2M_Ms_SI_VR_SWV
 
-copy=3003331
-talents=LotV_Mb_SI_VR_SWV
+talents=3003323
+copy=LotV_Mb_SI_VR_SWV
 
-copy=3003332
-talents=SC_Mb_SI_VR_SWV
+talents=3003331
+copy=SC_Mb_SI_VR_SWV
 
-copy=3003333
-talents=S2M_Mb_SI_VR_SWV
+talents=3003332
+copy=S2M_Mb_SI_VR_SWV
+talents=3003333
