@@ -1,6 +1,6 @@
 def parseline(line):
     cells = line.split(',')
-    return 'copy=%s\ntalents=%s\n' % (cells[0], cells[6])
+    return 'copy=%s\ntalents=%s\n' % (cells[6], cells[0])
 
 output = ''
 with open('talents.csv', 'r') as f:
