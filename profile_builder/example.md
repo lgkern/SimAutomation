@@ -1,1 +1,1 @@
-python pBuilder.py -d header.simc -l apl.simc -g 905.simc -t copy_talents.simc -b st.simc,2t(s).simc -a no_add.simc,small_add.simc,big_add.simc
+python pBuilder.py -d header.simc -l apl.simc -g 905.simc -t s2m.simc,sc.simc,lotv.simc -b st.simc,2t(s).simc -a no_add.simc,small_add.simc,big_add.simc

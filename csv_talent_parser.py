@@ -1,11 +1,24 @@
-def parseline(line):
+def parseline(line, talent):
     cells = line.split(',')
-    return 'copy=%s\ntalents=%s\n' % (cells[6], cells[0])
+    if(cells[5] == talent):
+        return 'copy=%stalents=%s\n\n' % (cells[6], cells[0])
+    return ''
 
 output = ''
 with open('talents.csv', 'r') as f:
     for line in f.readlines():
-        output += parseline(line)
-
-with open('copy_talents.simc', 'w') as o:
+        output += parseline(line,'S2M')
+with open('copy_talents_1.simc', 'w') as o:
     o.write(output)
+output = ''    
+with open('talents.csv', 'r') as f:
+    for line in f.readlines():
+        output += parseline(line,'SC')
+    with open('copy_talents_2.simc', 'w') as o:
+        o.write(output)
+output = ''
+with open('talents.csv', 'r') as f:
+    for line in f.readlines():
+        output += parseline(line,'LotV')
+    with open('copy_talents_3.simc', 'w') as o:
+        o.write(output)

@@ -12,11 +12,17 @@ def create_profile(header, apl, gear, talent, boss, add):
     add_content = ''
     filename = ''
     print(header + '.' +apl + '.' +gear + '.' +talent + '.' +boss + '.' +add)
+    
     if len(boss) > 0:
         with open(boss, 'r') as f:
             boss_content += f.read()
             filename += path.splitext(boss)[0] + '_'
 
+    if len(talent) > 0:
+        with open(talent, 'r') as f:
+            talent_content += f.read()
+            filename += path.splitext(talent)[0] + '_'
+            
     if len(header) > 0:
         with open(header, 'r') as f:
             header_content += f.read()
@@ -25,10 +31,6 @@ def create_profile(header, apl, gear, talent, boss, add):
         with open(gear, 'r') as f:
             gear_content += f.read()
             filename += path.splitext(gear)[0] + '_'
-            
-    if len(talent) > 0:
-        with open(talent, 'r') as f:
-            talent_content += f.read()
             
     if len(apl) > 0:
         with open(apl, 'r') as f:
