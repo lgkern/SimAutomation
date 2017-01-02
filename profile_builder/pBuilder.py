@@ -1,13 +1,7 @@
 from os import path
-
-with open('header.simc', 'r') as f:
-    header = f.readlines()
-    
-with open('header.simc', 'r') as f:
-    header = f.readlines()
-    
-with open('header.simc', 'r') as f:
-    header = f.readlines()
+from os import chdir
+from os import makedirs
+from optparse import OptionParser
 
 def create_profile(header, apl, gear, talent, boss, add):
     header_content = ''
@@ -17,36 +11,43 @@ def create_profile(header, apl, gear, talent, boss, add):
     boss_content = ''
     add_content = ''
     filename = ''
-    
+    print(header + '.' +apl + '.' +gear + '.' +talent + '.' +boss + '.' +add)
     if len(boss) > 0:
         with open(boss, 'r') as f:
-            boss_content += f.readlines
+            boss_content += f.read()
             filename += path.splitext(boss)[0] + '_'
 
     if len(header) > 0:
         with open(header, 'r') as f:
-            header_content += f.readlines
+            header_content += f.read()
             
     if len(gear) > 0:
         with open(gear, 'r') as f:
-            gear_content += f.readlines
+            gear_content += f.read()
             filename += path.splitext(gear)[0] + '_'
             
     if len(talent) > 0:
         with open(talent, 'r') as f:
-            talent_content += f.readlines 
+            talent_content += f.read()
             
     if len(apl) > 0:
         with open(apl, 'r') as f:
-            apl_content += f.readlines
+            apl_content += f.read()
             
     if len(add) > 0:
         with open(add, 'r') as f:
-            add_content += f.readlines
-            filename += path.splitext(add)[0] + '_'
-            
-    with open(filename, 'w') as f:
+            add_content += f.read()
+            filename += path.splitext(add)[0]
+    
+    if not path.exists('profiles'):
+        makedirs('profiles')
+    
+    chdir('profiles')
+    
+    with open(filename+'.simc', 'w') as f:
         f.write(header_content+'\n'+apl_content+'\n'+gear_content+'\n'+talent_content+'\n'+boss_content+'\n'+add_content+'\n')
+        
+    chdir('..')
             
 def main():
     usage = "usage: %prog [options] arg"
@@ -63,14 +64,14 @@ def main():
     apls = options.apl.split(',')
     gears = options.gear.split(',')
     talents = options.talents.split(',')
-    bosses = options.talents.split(',')
+    bosses = options.bosses.split(',')
     adds = options.adds.split(',')
     
     for header in headers:
         for apl in apls:
             for gear in gears:
                 for talent in talents:
-                    for boss in bosses
+                    for boss in bosses:
                         for add in adds:
                             create_profile(header, apl, gear, talent, boss, add)
 
