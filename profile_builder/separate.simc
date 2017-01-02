@@ -1,2 +1,0 @@
-enemy=Fluffier_Pillow
-raid_events+=/move_enemy,name=Fluffier_Pillow,cooldown=2000,duration=1000,x=-27,y=-27
