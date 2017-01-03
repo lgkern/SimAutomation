@@ -19,6 +19,9 @@ def sim(profile, fight, iterations=10000, scaleFactors=0, time=300, variance=0.1
         arguments+=' xml={0}.xml'.format(xmlFile+'_'+profile+'_'+fight+'_'+bossCount+'_'+time)
     if jsonFile:
         arguments+=' json={0}.json'.format(jsonFile+'_'+profile+'_'+fight+'_'+bossCount+'_'+time)
+    
+    arguments+='output=nul'
+    
     arguments+=' {0}'.format(profile)
     if logFile:
        arguments+=' > {0}.log'.format(logFile)
