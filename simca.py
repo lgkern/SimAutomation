@@ -20,7 +20,7 @@ def sim(profile, fight, iterations=10000, scaleFactors=0, time=300, variance=0.1
     if jsonFile:
         arguments+=' json={0}.json'.format(jsonFile+'_'+profile+'_'+fight+'_'+bossCount+'_'+time)
     
-    arguments+='output=nul'
+    arguments+=' output=nul '
     
     arguments+=' {0}'.format(profile)
     if logFile:
