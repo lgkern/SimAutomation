@@ -11,7 +11,7 @@ json2 = False
 scaleOnly = None
 
 def sim(profile, fight, iterations=10000, time=300, variance=0.1, bossCount=1, cores=4, outputFile=None, logFile=None, plotStats=None, plotPoints=20, plotStep=160.0, plotTargetError=0.1, xmlFile = None, jsonFile = None):
-    print("new version!")
+    print("Simulating!")
     
     arguments='iterations={0} calculate_scale_factors={1} max_time={2} vary_combat_length={3} fight_style={4} desired_targets={5} threads={6}'.format(iterations, scaleFactors, time, variance, fight, bossCount, cores)
     if disableBloodlust:
