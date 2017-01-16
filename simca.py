@@ -11,7 +11,7 @@ json2 = False
 scaleOnly = None
 
 def sim(profile, fight, iterations=10000, time=300, variance=0.1, bossCount=1, cores=4, outputFile=None, logFile=None, plotStats=None, plotPoints=20, plotStep=160.0, plotTargetError=0.1, xmlFile = None, jsonFile = None):
-    print("simming!")
+    print("new version!")
     
     arguments='iterations={0} calculate_scale_factors={1} max_time={2} vary_combat_length={3} fight_style={4} desired_targets={5} threads={6}'.format(iterations, scaleFactors, time, variance, fight, bossCount, cores)
     if disableBloodlust:
@@ -21,7 +21,7 @@ def sim(profile, fight, iterations=10000, time=300, variance=0.1, bossCount=1, c
         if plotTargetError != 0.1:
             arguments+=' dps_plot_target_error={0}'.format(plotTargetError) 
     if scaleOnly:
-        arguments += 'scale-only={0}',format(scaleOnly)
+        arguments += 'scale-only={0}'.format(scaleOnly)
     if outputFile:
         arguments+=' html={0}.html'.format(outputFile+'_'+profile+'_'+fight+'_'+bossCount+'_'+time)
     if xmlFile:
@@ -32,9 +32,8 @@ def sim(profile, fight, iterations=10000, time=300, variance=0.1, bossCount=1, c
     arguments+=' {0}'.format(profile)
     if logFile:
        arguments+=' > {0}.log'.format(logFile)
-    
-    if resumeMode and path.isfile('{0}.html'.format(jsonFile+'_'+profile+'_'+fight+'_'+bossCount+'_'+time)):
-       print('skipping '+'{0}'.format(jsonFile+'_'+profile+'_'+fight+'_'+bossCount+'_'+time))
+    if resumeMode and path.isfile('{0}.html'.format(outputFile+'_'+profile+'_'+fight+'_'+bossCount+'_'+time)):
+       print('Resume Mode! Skipping '+'{0}'.format(outputFile+'_'+profile+'_'+fight+'_'+bossCount+'_'+time))
     else:
         call("simc.exe "+arguments)
     
@@ -77,11 +76,18 @@ def main():
     parser.add_option("-a", "--plot-target-error", dest="plotTargetError", help=" hopefully this works!", default=0.1)   
     parser.add_option("-x", "--xml", dest="xmlFile", help="the xml output file name (base xml output file name for multiple simulations)", default='') 
     parser.add_option("-j", "--json", dest="jsonFile", help="the json output file name (base json output file name for multiple simulations)", default='') 
-    parser.add_option("-k", "--resume-mode", action="store_true", dest="resumeMode", help="enables the resume mode. With this mode, simca won't do sims that have already been done (output file already exists)", default=False) 
     parser.add_option("-2", "--json2", action="store_true", dest="json2", help="uses the experimental JSON2 output", default=False) 
+    parser.add_option("-k", "--resume-mode", action="store_true", dest="resumeMode", help="enables the resume mode. With this mode, simca won't do sims that have already been done (output file already exists)", default=False) 
     parser.add_option("-n", "--scale-only", dest="scaleOnly", help="sets which stats to scale. Requires --scale-factors to work. Supports comma-separated lists.", default=None) 
     
     (options, args) = parser.parse_args()
+    
+    global resumeMode
+    global disableBloodlust
+    global optimalRaid
+    global scaleFactors
+    global json2
+    global scaleOnly
     
     if not options.profilename:
         print('Invalid profile name, please provide a valid one')
