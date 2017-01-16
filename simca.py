@@ -3,7 +3,14 @@ from optparse import OptionParser
 from subprocess import call
 from os import path
 
-def sim(profile, fight, iterations=10000, scaleFactors=0, time=300, variance=0.1, bossCount=1, cores=4, outputFile=None, logFile=None, optimalRaid=True, disableBloodlust=False, plotStats=None, plotPoints=20, plotStep=160.0, plotTargetError=0.1, xmlFile = None, jsonFile = None):
+resumeMode = False
+disableBloodlust = False
+optimalRaid = False
+scaleFactors = 0
+json2 = False
+scaleOnly = None
+
+def sim(profile, fight, iterations=10000, time=300, variance=0.1, bossCount=1, cores=4, outputFile=None, logFile=None, plotStats=None, plotPoints=20, plotStep=160.0, plotTargetError=0.1, xmlFile = None, jsonFile = None):
     print("simming!")
     
     arguments='iterations={0} calculate_scale_factors={1} max_time={2} vary_combat_length={3} fight_style={4} desired_targets={5} threads={6}'.format(iterations, scaleFactors, time, variance, fight, bossCount, cores)
@@ -13,18 +20,23 @@ def sim(profile, fight, iterations=10000, scaleFactors=0, time=300, variance=0.1
         arguments+=' dps_plot_stat={0} dps_plot_points={1} dps_plot_step={2}'.format(plotStats, plotPoints, plotStep)
         if plotTargetError != 0.1:
             arguments+=' dps_plot_target_error={0}'.format(plotTargetError) 
+    if scaleOnly:
+        arguments += 'scale-only={0}',format(scaleOnly)
     if outputFile:
         arguments+=' html={0}.html'.format(outputFile+'_'+profile+'_'+fight+'_'+bossCount+'_'+time)
     if xmlFile:
         arguments+=' xml={0}.xml'.format(xmlFile+'_'+profile+'_'+fight+'_'+bossCount+'_'+time)
     if jsonFile:
-        arguments+=' json={0}.json'.format(jsonFile+'_'+profile+'_'+fight+'_'+bossCount+'_'+time)
+        arguments+=' {0}={1}.json'.format('json2' if json2 else 'json', jsonFile+'_'+profile+'_'+fight+'_'+bossCount+'_'+time)
     arguments += ' output=nul '
     arguments+=' {0}'.format(profile)
     if logFile:
        arguments+=' > {0}.log'.format(logFile)
     
-    call("simc.exe "+arguments)
+    if resumeMode and path.isfile('{0}.html'.format(jsonFile+'_'+profile+'_'+fight+'_'+bossCount+'_'+time)):
+       print('skipping '+'{0}'.format(jsonFile+'_'+profile+'_'+fight+'_'+bossCount+'_'+time))
+    else:
+        call("simc.exe "+arguments)
     
 def fight_reader(fight):
     fight = fight.lower()
@@ -65,23 +77,33 @@ def main():
     parser.add_option("-a", "--plot-target-error", dest="plotTargetError", help=" hopefully this works!", default=0.1)   
     parser.add_option("-x", "--xml", dest="xmlFile", help="the xml output file name (base xml output file name for multiple simulations)", default='') 
     parser.add_option("-j", "--json", dest="jsonFile", help="the json output file name (base json output file name for multiple simulations)", default='') 
-
+    parser.add_option("-k", "--resume-mode", action="store_true", dest="resumeMode", help="enables the resume mode. With this mode, simca won't do sims that have already been done (output file already exists)", default=False) 
+    parser.add_option("-2", "--json2", action="store_true", dest="json2", help="uses the experimental JSON2 output", default=False) 
+    parser.add_option("-n", "--scale-only", dest="scaleOnly", help="sets which stats to scale. Requires --scale-factors to work. Supports comma-separated lists.", default=None) 
+    
     (options, args) = parser.parse_args()
-
+    
     if not options.profilename:
         print('Invalid profile name, please provide a valid one')
         return
             
     times = str(options.time) if not isinstance(options.time,str) else options.time
+    resumeMode = options.resumeMode
+    disableBloodlust = options.disableBloodlust
+    optimalRaid = options.optimalRaid
+    scaleFactors = 1 if options.scaleFactors else 0
+    json2 = options.json2
+    
+    scaleOnly = options.scaleOnly.lower() if options.scaleOnly else None
     
     for time in times.split(","):
         for profile in options.profilename.split(","):
             for fight in options.fights.split(","):
                 if isinstance(options.bosses,str):
                     for bossCount in options.bosses.split(","):
-                        sim(profile, fight_reader(fight), options.iterations, 1 if options.scaleFactors else 0, time, options.variance, bossCount, options.cores, path.splitext(options.outputFile)[0], options.logFile, options.optimalRaid, options.disableBloodlust, options.plotStats, options.plotPoints, options.plotStep, options.plotTargetError, path.splitext(options.xmlFile)[0], path.splitext(options.jsonFile)[0])
+                        sim(profile, fight_reader(fight), options.iterations, time, options.variance, bossCount, options.cores, path.splitext(options.outputFile)[0], options.logFile, options.plotStats, options.plotPoints, options.plotStep, options.plotTargetError, path.splitext(options.xmlFile)[0], path.splitext(options.jsonFile)[0])
                 else:
-                    sim(profile, fight_reader(fight), options.iterations, 1 if options.scaleFactors else 0, time, options.variance, options.bosses, options.cores, options.outputFile, options.logFile, options.optimalRaid, options.disableBloodlust, options.plotStats, options.plotPoints, options.plotStep, options.plotTargetError, path.splitext(options.xmlFile)[0], path.splitext(options.jsonFile)[0])
+                    sim(profile, fight_reader(fight), options.iterations, time, options.variance, options.bosses, options.cores, options.outputFile, options.logFile, options.plotStats, options.plotPoints, options.plotStep, options.plotTargetError, path.splitext(options.xmlFile)[0], path.splitext(options.jsonFile)[0])
 
 if __name__ == "__main__":
     main()
