@@ -3,30 +3,33 @@ import os
 import json
 from os import path
 
-def parse(filename, isCsv, hideHeaders, hideProfiles, hideActors):
+def parse(filename, isCsv, hideHeaders, hideProfiles, hideActors, dpsOnly):
     separator = ',' if isCsv else '\t'
     if(hideHeaders):
         ret = ''
     else:   
         ret = filename + '\n'
-        ret += 'actor'+separator+'DD'+separator+'DPS'+separator+'int'+separator+'haste'+separator+'crit'+separator+'mastery'+separator+'vers\n' 
+        ret += 'actor'+separator+'DD'+separator+'DPS'
+        if not dpsOnly:
+            ret += separator+'int'+separator+'haste'+separator+'crit'+separator+'mastery'+separator+'vers\n' 
     with open(filename, "r") as f:
         s = f.read()
         sim = json.loads(s)
         for player in sim['sim']['players']:
-            if 'Int' in player['scale_factors']:                 
+            if 'Int' in player['scale_factors'] or dpsOnly:                 
                 if(not hideProfiles):
                     ret+= path.splitext(filename)[0]+separator
                 if(not hideActors):
                     ret+= player['name'] + separator
                 ret+= '{0:.{1}f}'.format(player['collected_data']['dmg']['mean'],2) + separator
                 ret+= '{0:.{1}f}'.format(player['collected_data']['dps']['mean'],2) + separator
-                weights = player['scale_factors']
-                ret+= '{0:.{1}f}'.format(weights['Int'],2) + separator
-                ret+= '{0:.{1}f}'.format(weights['Haste'],2) + separator
-                ret+= '{0:.{1}f}'.format(weights['Crit'],2) + separator
-                ret+= '{0:.{1}f}'.format(weights['Mastery'],2) + separator
-                ret+= '{0:.{1}f}'.format(weights['Vers'],2)
+                if not dpsOnly:
+                    weights = player['scale_factors']
+                    ret+= '{0:.{1}f}'.format(weights['Int'],2) + separator
+                    ret+= '{0:.{1}f}'.format(weights['Haste'],2) + separator
+                    ret+= '{0:.{1}f}'.format(weights['Crit'],2) + separator
+                    ret+= '{0:.{1}f}'.format(weights['Mastery'],2) + separator
+                    ret+= '{0:.{1}f}'.format(weights['Vers'],2)
                 ret+= '\n'
     return ret+ '\n' if not hideHeaders else ret
 
@@ -40,6 +43,8 @@ def main():
     parser.add_option("-r", "--hide-headers",  action="store_true", dest="hideHeaders", default = False, help="hides the headers from files for better sheet export")
     parser.add_option("-a", "--hide-actors",  action="store_true", dest="hideActors", default = False, help="hides the actors column in the output file")
     parser.add_option("-f", "--hide-profiles",  action="store_true", dest="hideProfiles", default = False, help="hides the profiles column in the output file")
+    parser.add_option("-s", "--dps-only",  action="store_true", dest="dpsOnly", default = False, help="extracts only the DPS from the profiles")
+    
     (options, args) = parser.parse_args()
     
     if options.directory != None:
@@ -54,11 +59,13 @@ def main():
             parses += 'profile'+separator
         if not options.hideActors:
             parses += 'actor'+separator
-        parses += 'DD'+separator+'DPS'+separator+'int'+separator+'haste'+separator+'crit'+separator+'mastery'+separator+'vers\n'
+        parses += 'DD'+separator+'DPS'
+        if not options.dpsOnly:
+            parses +=separator+'int'+separator+'haste'+separator+'crit'+separator+'mastery'+separator+'vers\n'
     
     for filename in os.listdir(os.getcwd()):
         if filename.startswith(options.prefix) and filename.endswith('.json'):
-            parses += parse(filename, options.csv, options.hideHeaders, options.hideProfiles, options.hideActors)
+            parses += parse(filename, options.csv, options.hideHeaders, options.hideProfiles, options.hideActors, options.dpsOnly)
             
     with open(options.output, "w") as ofile:
         print(parses, file=ofile)

@@ -58,12 +58,12 @@ def fight_reader(fight):
 def main():
     usage = "usage: %prog [options] arg"
     parser = OptionParser(usage)
-    parser.add_option("-p", "--profile", dest="profilename", help="sim profile file to be read (supports comma-separated lists)")
+    parser.add_option("-p", "--profile", dest="profilename", help="sim profile file to be read (supports comma-separated lists)",default=None)
     parser.add_option("-i", "--iterations", dest="iterations", help="amount of iterations to be run by each profile", default=10000)
     parser.add_option("-s", "--scale-factors", action="store_true", dest="scaleFactors", help="calculate scale factors for each simulation ran", default=False)
     parser.add_option("-t", "--time", dest="time", help="maximum simulation length (supports comma-separated lists)", default=300)         
     parser.add_option("-v", "--variance", dest="variance", help="simulation length variance, ranges from 0 to 1", default=0.1)    
-    parser.add_option("-f", "--fights", dest="fights", default="pw", help="fight styles to be simulated (supports comma-separated lists)") 
+    parser.add_option("-f", "--fights", dest="fights", default="pw", help="fight styles to be simulated (supports comma-separated lists)",default=None) 
     parser.add_option("-b", "--bosses", dest="bosses", help="amount of bosses in each simulation (supports comma-separated lists)", default=1)  
     parser.add_option("-c", "--cores", dest="cores", help="amount of threads to be used by SimulationCraft",default=4)   
     parser.add_option("-o", "--output", dest="outputFile", help="output file name (base output file name for multiple simulations)", default=None) 
@@ -74,8 +74,8 @@ def main():
     parser.add_option("-z", "--plot-points", dest="plotPoints", help="the number of points to use to create the plot graph.", default=20)   
     parser.add_option("-e", "--plot-steps", dest="plotStep", help=" is the delta between two points of the plot graph.", default=160.0)   
     parser.add_option("-a", "--plot-target-error", dest="plotTargetError", help=" hopefully this works!", default=0.1)   
-    parser.add_option("-x", "--xml", dest="xmlFile", help="the xml output file name (base xml output file name for multiple simulations)", default='') 
-    parser.add_option("-j", "--json", dest="jsonFile", help="the json output file name (base json output file name for multiple simulations)", default='') 
+    parser.add_option("-x", "--xml", dest="xmlFile", help="the xml output file name (base xml output file name for multiple simulations)", default=None) 
+    parser.add_option("-j", "--json", dest="jsonFile", help="the json output file name (base json output file name for multiple simulations)", default=None) 
     parser.add_option("-2", "--json2", action="store_true", dest="json2", help="uses the experimental JSON2 output", default=False) 
     parser.add_option("-k", "--resume-mode", action="store_true", dest="resumeMode", help="enables the resume mode. With this mode, simca won't do sims that have already been done (output file already exists)", default=False) 
     parser.add_option("-n", "--scale-only", dest="scaleOnly", help="sets which stats to scale. Requires --scale-factors to work. Supports comma-separated lists.", default=None) 
@@ -90,9 +90,17 @@ def main():
     global scaleOnly
     
     if not options.profilename:
-        print('Invalid profile name, please provide a valid one')
+        print('Error: No profiles specified, please provide at least a valid one')
         return
-            
+     
+    if not options.fights:
+        print('Error: No fights specified, please choose at least one')
+        return
+    
+    if not options.outputFile:
+        print('Error: No output name specified')
+        return
+        
     times = str(options.time) if not isinstance(options.time,str) else options.time
     resumeMode = options.resumeMode
     disableBloodlust = options.disableBloodlust
