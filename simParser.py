@@ -16,7 +16,7 @@ def parse(filename, isCsv, hideHeaders, hideProfiles, hideActors, dpsOnly):
         s = f.read()
         sim = json.loads(s)
         for player in sim['sim']['players']:
-            if 'Int' in player['scale_factors'] or dpsOnly:                 
+            if dpsOnly or 'Int' in player['scale_factors']:                
                 if(not hideProfiles):
                     ret+= path.splitext(filename)[0]+separator
                 if(not hideActors):
