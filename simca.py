@@ -115,7 +115,7 @@ def main():
             for fight in options.fights.split(","):
                 if isinstance(options.bosses,str):
                     for bossCount in options.bosses.split(","):
-                        sim(profile, fight_reader(fight), options.iterations, time, options.variance, bossCount, options.cores, path.splitext(options.outputFile)[0], options.logFile, options.plotStats, options.plotPoints, options.plotStep, options.plotTargetError, path.splitext(options.xmlFile)[0], path.splitext(options.jsonFile)[0])
+                        sim(profile, fight_reader(fight), options.iterations, time, options.variance, bossCount, options.cores, path.splitext(options.outputFile)[0], options.logFile, options.plotStats, options.plotPoints, options.plotStep, options.plotTargetError, path.splitext(options.xmlFile)[0] if options.xmlFile else None, path.splitext(options.jsonFile)[0] if options.jsonFile else None)
                 else:
                     sim(profile, fight_reader(fight), options.iterations, time, options.variance, options.bosses, options.cores, options.outputFile, options.logFile, options.plotStats, options.plotPoints, options.plotStep, options.plotTargetError, path.splitext(options.xmlFile)[0], path.splitext(options.jsonFile)[0])
 
