@@ -63,7 +63,7 @@ def main():
     parser.add_option("-s", "--scale-factors", action="store_true", dest="scaleFactors", help="calculate scale factors for each simulation ran", default=False)
     parser.add_option("-t", "--time", dest="time", help="maximum simulation length (supports comma-separated lists)", default=300)         
     parser.add_option("-v", "--variance", dest="variance", help="simulation length variance, ranges from 0 to 1", default=0.1)    
-    parser.add_option("-f", "--fights", dest="fights", default="pw", help="fight styles to be simulated (supports comma-separated lists)",default=None) 
+    parser.add_option("-f", "--fights", dest="fights", default="pw", help="fight styles to be simulated (supports comma-separated lists)") 
     parser.add_option("-b", "--bosses", dest="bosses", help="amount of bosses in each simulation (supports comma-separated lists)", default=1)  
     parser.add_option("-c", "--cores", dest="cores", help="amount of threads to be used by SimulationCraft",default=4)   
     parser.add_option("-o", "--output", dest="outputFile", help="output file name (base output file name for multiple simulations)", default=None) 
