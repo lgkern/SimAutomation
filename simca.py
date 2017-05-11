@@ -11,7 +11,7 @@ json2 = False
 scaleOnly = None
 
 def sim(profile, fight, iterations=10000, time=300, variance=0.1, bossCount=1, cores=4, outputFile=None, logFile=None, plotStats=None, plotPoints=20, plotStep=160.0, plotTargetError=0.1, xmlFile = None, jsonFile = None):
-    print("Revision 50 2017-03-31")
+    print("Revision 51 2017-05-11")
     
     arguments='iterations={0} calculate_scale_factors={1} max_time={2} vary_combat_length={3} fight_style={4} desired_targets={5} threads={6}'.format(iterations, scaleFactors, time, variance, fight, bossCount, cores)
     if disableBloodlust:
@@ -21,7 +21,7 @@ def sim(profile, fight, iterations=10000, time=300, variance=0.1, bossCount=1, c
         if plotTargetError != 0.1:
             arguments+=' dps_plot_target_error={0}'.format(plotTargetError) 
     if scaleOnly:
-        arguments += 'scale-only={0}'.format(scaleOnly)
+        arguments += ' scale_only={0}'.format(scaleOnly)
     if outputFile:
         arguments+=' html={0}.html'.format(outputFile+'_'+profile+'_'+fight+'_'+bossCount+'_'+time)
     if xmlFile:
@@ -34,7 +34,7 @@ def sim(profile, fight, iterations=10000, time=300, variance=0.1, bossCount=1, c
        arguments+=' > {0}.log'.format(logFile)
     hasJsonFile = resumeMode and jsonFile and path.isfile('{0}.json'.format(jsonFile+'_'+profile+'_'+fight+'_'+bossCount+'_'+time))
     hasHtmlFile = resumeMode and outputFile and path.isfile('{0}.html'.format(outputFile+'_'+profile+'_'+fight+'_'+bossCount+'_'+time))
-    #print(path.isfile('{0}.json'.format(jsonFile+'_'+profile+'_'+fight+'_'+bossCount+'_'+time)))
+    
     if hasHtmlFile:
        print('Resume Mode! Skipping {0}\n'.format(outputFile+'_'+profile+'_'+fight+'_'+bossCount+'_'+time))
     elif hasJsonFile:
@@ -104,7 +104,6 @@ def main():
     optimalRaid = options.optimalRaid
     scaleFactors = 1 if options.scaleFactors else 0
     json2 = options.json2
-    print(options.jsonFile)
     
     scaleOnly = options.scaleOnly.lower() if options.scaleOnly else None
     
