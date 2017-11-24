@@ -73,7 +73,6 @@ def main():
     parser.add_option("-a", "--hide-actors",  action="store_true", dest="hideActors", default = False, help="hides the actors column in the output file")
     parser.add_option("-f", "--hide-profiles",  action="store_true", dest="hideProfiles", default = False, help="hides the profiles column in the output file")
     parser.add_option("-s", "--dps-only",  action="store_true", dest="dpsOnly", default = False, help="extracts only the DPS from the profiles")
-    parser.add_option("-b", "--profile-sets",  action="store_true", dest="profileSets", default = False, help="extract data from profile sets as well")
     
     (options, args) = parser.parse_args()
     
