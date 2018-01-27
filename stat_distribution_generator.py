@@ -29,11 +29,10 @@ def distribution_generator(budget, step, minStats, maxStats):
 def generate_profile(combination):
     crit,haste,mast,vers=combination
     
-    profile = '\ncopy='+str(crit)+'_'+str(haste)+'_'+str(mast)+'_'+str(vers)
-    profile+= '\ngear_crit_rating='+str(crit)
-    profile+= '\ngear_haste_rating='+str(haste)
-    profile+= '\ngear_mastery_rating='+str(mast)
-    profile+= '\ngear_versatility_rating='+str(vers)+'\n'
+    profile = '\nprofileset.'+str(crit)+'_'+str(haste)+'_'+str(mast)+'_'+str(vers)+'=gear_crit_rating='+str(crit)
+    profile+= '\nprofileset.'+str(crit)+'_'+str(haste)+'_'+str(mast)+'_'+str(vers)+'+=gear_haste_rating='+str(haste)
+    profile+= '\nprofileset.'+str(crit)+'_'+str(haste)+'_'+str(mast)+'_'+str(vers)+'+=gear_mastery_rating='+str(mast)
+    profile+= '\nprofileset.'+str(crit)+'_'+str(haste)+'_'+str(mast)+'_'+str(vers)+'+=gear_versatility_rating='+str(vers)+'\n'
     
     return profile
    
