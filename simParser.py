@@ -33,7 +33,7 @@ def parse(filename, isCsv, hideHeaders, hideProfiles, hideActors, dpsOnly):
                     ret+= '{0:.{1}f}'.format(weights['Mastery'],2) + separator
                     ret+= '{0:.{1}f}'.format(weights['Vers'],2)
                 ret+= '\n'
-    if sim['sim']['profilesets']:
+    if 'profilesets' in sim['sim']:
         ret+= parseProfileSets(filename, isCsv, hideHeaders, hideProfiles, hideActors, dpsOnly)
     return ret+ '\n' if not hideHeaders else ret
     
