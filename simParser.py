@@ -12,6 +12,7 @@ def parse(filename, isCsv, hideHeaders, hideProfiles, hideActors, dpsOnly):
         ret = filename + '\n'
         ret += 'actor'+separator+'DD'+separator+'DPS\n'
         if not dpsOnly:
+            ret = ret[0:-1]
             ret += separator+'int'+separator+'haste'+separator+'crit'+separator+'mastery'+separator+'vers\n' 
     with open(filename, "r") as f:
         s = f.read()
@@ -44,22 +45,14 @@ def parseProfileSets(filename, isCsv, hideHeaders, hideProfiles, hideActors, dps
         s = f.read()
         sim = json.loads(s)
         results = sim['sim']['profilesets']['results']        
-        for profile in sorted(results, key=lambda k: k['name']):
-            if dpsOnly or 'Int' in profile['scale_factors']:                
-                if(not hideProfiles):
-                    ret+= path.splitext(filename)[0]+separator
-                if(not hideActors):
-                    ret+= profile['name'] + separator
-                ret+= '{0:.{1}f}'.format(0,2) + separator
-                ret+= '{0:.{1}f}'.format(profile['mean'],2) + separator
-                if not dpsOnly:
-                    weights = profile['scale_factors']
-                    ret+= '{0:.{1}f}'.format(weights['Int'],2) + separator
-                    ret+= '{0:.{1}f}'.format(weights['Haste'],2) + separator
-                    ret+= '{0:.{1}f}'.format(weights['Crit'],2) + separator
-                    ret+= '{0:.{1}f}'.format(weights['Mastery'],2) + separator
-                    ret+= '{0:.{1}f}'.format(weights['Vers'],2)
-                ret+= '\n'
+        for profile in sorted(results, key=lambda k: k['name']):                            
+            if(not hideProfiles):
+                ret+= path.splitext(filename)[0]+separator
+            if(not hideActors):
+                ret+= profile['name'] + separator
+            ret+= '{0:.{1}f}'.format(0,2) + separator
+            ret+= '{0:.{1}f}'.format(profile['mean'],2) + separator        
+            ret+= '\n'  
     return ret+ '\n' if not hideHeaders else ret    
 
 def main():
